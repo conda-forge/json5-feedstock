@@ -1,18 +1,18 @@
 {% set name = "json5" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "62a7a36f5f9806108d39bfc59d4458e2a083762a2fc15fd3c7828c72502fd702"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 45e4223cabc69d97a57407743dec2af9316c59e1d865836a026ad71c93bfea5a
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps -vv '
   entry_points:
     - pyjson5 = json5.tool:main
 
