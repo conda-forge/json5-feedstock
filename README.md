@@ -5,7 +5,7 @@ Home: https://github.com/dpranke/pyjson5
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A Python implementation of the JSON5 data format
 
