@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@ian-r-rose](https://github.com/ian-r-rose/)
+* [@rxm7706](https://github.com/rxm7706/)
 
