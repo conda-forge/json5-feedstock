@@ -10,31 +10,35 @@ source:
   sha256: 9175ad1bc248e22bb8d95a8e8d765958bf0008fef2fe8abab5bc04e0f1ac8302
 
 build:
-  number: 0
-  noarch: python
-  script: '{{ PYTHON }} -m pip install . --no-deps -vv '
   entry_points:
-    - pyjson5 = json5.tool:main
+    - pyjson5=json5.tool:main
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
+    - python >=3.7,<4.0
     - pip
-    - python
   run:
-    - python
+    - python >=3.7,<4.0
 
 test:
   imports:
     - json5
+  commands:
+    - pip check
+    - pyjson5 --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/dpranke/pyjson5
+  summary: A Python implementation of the JSON5 data format.
   license: Apache-2.0
-  license_family: Apache
   license_file: LICENSE
-  summary: A Python implementation of the JSON5 data format
-  dev_url: https://github.com/dpranke/pyjson5
 
 extra:
   recipe-maintainers:
+    - rxm7706
     - ian-r-rose
