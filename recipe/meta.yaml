@@ -1,5 +1,5 @@
 {% set name = "json5" %}
-{% set version = "0.9.28" %}
+{% set version = "0.10.0" %}
 {% set python_min = python_min|default("3.8") %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/json5-{{ version }}.tar.gz
-  sha256: 1f82f36e615bc5b42f1bbd49dbc94b12563c56408c6ffa06414ea310890e9a6e
+  sha256: e66941c8f0a02026943c52c2eb34ebeb2a6f819a0be05920a6f5243cd30fd559
 
 build:
   entry_points:
