@@ -32,7 +32,7 @@ test:
     - pip check
     - pyjson5 --help
   requires:
-    - python ={{ python_min }}
+    - python {{ python_min }}
     - pip
 
 about:
